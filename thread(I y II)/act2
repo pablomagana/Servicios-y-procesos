@@ -1,0 +1,2 @@
+El code del ejercici 2 unicament fá en bucle infinit en un unic fil d'execució(nomes s'executa un hilo.start() )
+En este bucle, imprimeix el seu nom y s'espera el numero de segons que li retorne el Math.random, que retorna un numero del 0 al 9999.
