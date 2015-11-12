@@ -1,17 +1,17 @@
 
-public class Palindromos extends Thread {
-	private static String palabra;
+public class Palindromos implements Runnable{
+	private  String palabra;
 	public  Palindromos(String p){
 		this.palabra=p;
 	}
 	public boolean esPalindromo(){
-		
-		for(int i=0;i<palabra.length();i++){
-			if((palabra.charAt(i))!=(palabra.charAt((palabra.length()-1)-i))){
-				return false;
-			}
+		String inversa=new StringBuilder(palabra).reverse().toString();
+		if(palabra.equalsIgnoreCase(inversa)==true){
+			return true;
+		}else{
+			return false;
 		}
-		return true;
+		
 	}
 	@Override
 	public void run() {
